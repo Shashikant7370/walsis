@@ -1,12 +1,13 @@
 import { Suspense } from "react";
-import ResultCards from "./resultcart";
+
+const ResultCards = dynamic(() => import("./resultcart"), { ssr: false });
 
 export default function PageCards() {
   return(
     <div>
       <Suspense fallback={<div>Loading...</div>}>
+        <ResultCards/>
       </Suspense>
-      <ResultCards/>
     </div>
   )
 }
