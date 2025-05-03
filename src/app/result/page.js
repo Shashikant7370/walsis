@@ -3,9 +3,10 @@ import React from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaClosedCaptioning, FaCopy, FaCross, FaFacebook, FaGithub, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import {  FaCopy, FaFacebook, FaGithub, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 export default function ResultCards() {
+  
    const searchParams = useSearchParams();
    const data = searchParams.get("data");
    const quizData = data ? JSON.parse(decodeURIComponent(data)): {};
