@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
@@ -21,7 +22,7 @@ export default function Navbar() {
   }, [mobile]);
 
   const menuItems = [
-    { name: "Discover", href: "/login" },
+    { name: "Home", href: "/home" },
     { name: "AI", href: "/login" },
     { name: "Join", href: "/login" },
     { name: "Creator", href: "/login" },
@@ -38,7 +39,9 @@ export default function Navbar() {
             alt="Logo"
             className="w-12 rounded-full"
           />
-          <span className="font-sans text-3xl">Quizard</span>
+          <span className="font-sans text-3xl">
+            <Link href={"/home"}>Quizard</Link>
+          </span>
         </div>
 
         {/* Desktop Menu */}
